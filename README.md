@@ -1,95 +1,25 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+# Social-media
+
+FrontEnd = npm run dev
+BackEnd = npm run dev
 
 
-::-webkit-scrollbar {
-  display: none;
-   -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;
-}
+site_url : https://nano-media.netlify.app/
 
-.topbar{
-position: sticky;
-top: 0px;
-z-index: 49;
-}
+ # Frontend
+the above project made with tech stack ReactJS , for FrontEnd  we build the structure and layout with tailwind css 
 
+npm install -D tailwindcss
+npx tailwindcss init
 
-.dots-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
-  margin-bottom: 5px;
-}
+ The main front-end states are managed using Redux Toolkit with different slices for each part of the state. This approach effectively reduces the problem of prop drilling and allows for efficient state management without a complex structure. By organizing the state into slices, each part of the state is managed independently, leading to a more maintainable and scalable application.
 
-.dot {
-  height: 12px;
-  width: 12px;
-  margin-right: 10px;
-  border-radius: 10px;
-  background-color: #fff;
-  animation: pulse 1.5s infinite ease-in-out;
-}
+npm install @reduxjs/toolkit react-redux
 
-.dot:last-child {
-  margin-right: 0;
-}
+ # Backend
+   
+backend was developed using Firebase  to include interesting features like notifications 
 
-.dot:nth-child(1) {
-  animation-delay: -0.3s;
-}
+# Setup
 
-.dot:nth-child(2) {
-  animation-delay: -0.1s;
-}
-
-.dot:nth-child(3) {
-  animation-delay: 0.1s;
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(0.8);
-    background-color: #b3d4fc;
-    box-shadow: 0 0 0 0 rgba(178, 212, 252, 0.7);
-  }
-
-  50% {
-    transform: scale(1.2);
-    background-color: #4b79e4;
-    box-shadow: 0 0 0 10px rgba(178, 212, 252, 0);
-  }
-
-  100% {
-    transform: scale(0.8);
-    background-color: #2584f8;
-    box-shadow: 0 0 0 0 rgba(178, 212, 252, 0.7);
-  }
-}
-
-@layer base {
-  :root {
-    --color-bg: 227 227 227;
-    --color-primary: 255 255 255;
-    --color-secondary:255 255 255;
-    --color-ascent1: 0 0 0;
-    --color-ascent2: 89 91 100;
-    --color-blue: 6 90 216;
-    --color-white: 255 255 255;
-
-  }
-  /* //15 23 42  21 30 49*/
-  [data-theme="dark"] {
-     --color-bg: 12 12 12;
-     --color-primary: 31 31 31;
-    --color-secondary: 47 45 48;
-    --color-ascent1: 255 255 255;
-    --color-ascent2: 164 161 162;
-    --color-blue: 6 90 216;
-    /* //16 176 255; */
-    --color-white: 255 255 255;
-  }
-}
+1
